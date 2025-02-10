@@ -3,6 +3,13 @@
   function refreshPage() {
     location.reload()
   }
+  let count = $state(0)
+  function increment() {
+    count += 1;
+  }
+  function decrement() {
+    count -= 1;
+  }
 </script>
 
 <main
@@ -25,5 +32,8 @@
     <div class="text-5xl font-bold">
       {data?.pageVisits}
     </div>
+    <button onclick={decrement}>down</button>
+    <p>{count}</p>
+    <button onclick={increment}>up</button>
   </div>
 </main>
